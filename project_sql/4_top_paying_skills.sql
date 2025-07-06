@@ -18,8 +18,8 @@ LEFT JOIN job_postings_fact
 ON job_postings_fact.job_id = skills_job_dim.job_id
 WHERE
     job_title_short = 'Data Analyst' AND 
-    job_location = 'India' AND 
     salary_year_avg IS NOT NULL
+    AND job_work_from_home = True 
 GROUP BY
          skills
 ORDER BY
